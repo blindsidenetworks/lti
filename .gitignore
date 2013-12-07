@@ -3,3 +3,4 @@
 .settings/*
 make.sh
 deploy.sh
+/bin

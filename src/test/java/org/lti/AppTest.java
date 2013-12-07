@@ -1,4 +1,4 @@
-package org.blindsidenetworks.lti;
+package org.lti;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
