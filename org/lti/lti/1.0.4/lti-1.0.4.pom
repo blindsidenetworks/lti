@@ -4,7 +4,7 @@
   <groupId>org.lti</groupId>
   <artifactId>lti</artifactId>
   <packaging>jar</packaging>
-  <version>1.0.3</version>
+  <version>1.0.4</version>
   <name>LTI</name>
   <description>LTI Library for java integrations.</description>
     
@@ -66,14 +66,14 @@
   </dependencies>
 
   <repositories>
-    <repository>
-      <id>oauth-maven-repo</id>
-      <url>https://raw.github.com/blindsidenetworks/oauth/mvn-repo/</url>
-      <snapshots>
-        <enabled>true</enabled>
-        <updatePolicy>always</updatePolicy>
-      </snapshots>
-    </repository>
+  	<repository>
+ 		<id>oauth-maven-repo</id>
+  		<url>https://raw.github.com/blindsidenetworks/oauth/mvn-repo/</url>
+  		<snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>always</updatePolicy>
+        </snapshots>
+	</repository>
   </repositories>
 
   <build>

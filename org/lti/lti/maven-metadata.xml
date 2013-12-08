@@ -2,11 +2,11 @@
 <metadata>
   <groupId>org.lti</groupId>
   <artifactId>lti</artifactId>
-  <version>1.0.3</version>
+  <version>1.0.4</version>
   <versioning>
     <versions>
-      <version>1.0.3</version>
+      <version>1.0.4</version>
     </versions>
-    <lastUpdated>20131208070557</lastUpdated>
+    <lastUpdated>20131208144417</lastUpdated>
   </versioning>
 </metadata>
