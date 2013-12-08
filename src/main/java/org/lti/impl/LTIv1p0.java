@@ -10,19 +10,19 @@ public abstract class LTIv1p0 {
      * This is an opaque identifier that uniquely identifies the context that
      * contains the link being launched.
      */
-    public final String CONTEXT_ID = "context_id";
+    public static final String CONTEXT_ID = "context_id";
     /**
      * context_label=SI182
      * <p>
      * A label for the context - intended to fit in a column.
      */
-    public final String CONTEXT_LABEL = "context_label";
+    public static final String CONTEXT_LABEL = "context_label";
     /**
      * context_title=Design of Personal Environments
      * <p>
      * A title of the context - it should be about the length of a line.
      */
-    public final String CONTEXT_TITLE = "context_title";
+    public static final String CONTEXT_TITLE = "context_title";
 
     /**
      * context_type=CourseSection
@@ -34,11 +34,11 @@ public abstract class LTIv1p0 {
      * LIS context type. If the TC wants to include a context type from another
      * namespace, a fully-qualified URN should be used.
      */
-    public final String CONTEXT_TYPE = "context_type";
-    public final String CONTEXT_TYPE_COURSE_OFFERING = "CourseOffering";
-    public final String CONTEXT_TYPE_COURSE_SECTION = "CourseSection";
-    public final String CONTEXT_TYPE_COURSE_TEMPLATE = "CourseTemplate";
-    public final String CONTEXT_TYPE_GROUP = "GROUP";
+    public static final String CONTEXT_TYPE = "context_type";
+    public static final String CONTEXT_TYPE_COURSE_OFFERING = "CourseOffering";
+    public static final String CONTEXT_TYPE_COURSE_SECTION = "CourseSection";
+    public static final String CONTEXT_TYPE_COURSE_TEMPLATE = "CourseTemplate";
+    public static final String CONTEXT_TYPE_GROUP = "GROUP";
 
     /**
      * ext_param=value
@@ -46,7 +46,7 @@ public abstract class LTIv1p0 {
      * Systems can add their own values to the launch but should prefix
      * any extensions with "ext_".
      */
-    public final String EXTENSION_PREFIX = "ext_";
+    public static final String EXTENSION_PREFIX = "ext_";
     /**
      * custom_keyname=value
      * <p>
@@ -70,11 +70,11 @@ public abstract class LTIv1p0 {
      * these custom parameters are included in the Basic LTI link, the TC must
      * include them in the launch data or the TP may fail to function.
      */
-    public final String CUSTOM_PREFIX = "custom_";
+    public static final String CUSTOM_PREFIX = "custom_";
     /**
      * Parameters with the OAuth prefix are also acceptible.
      */
-    public final String OAUTH_PREFIX = "oauth_";
+    public static final String OAUTH_PREFIX = "oauth_";
     /**
      * launch_presentation_document_target=iframe
      * <p>
@@ -82,14 +82,14 @@ public abstract class LTIv1p0 {
      * communicates the kind of browser window/frame where the TC has launched the
      * tool.
      */
-    public final String LAUNCH_PRESENTATION_DOCUMENT_TARGET = "launch_presentation_document_target";
+    public static final String LAUNCH_PRESENTATION_DOCUMENT_TARGET = "launch_presentation_document_target";
     /**
      * launch_presentation_height=240
      * <p>
      * The height of the window or frame where the content from the tool will be
      * displayed.
      */
-    public final String LAUNCH_PRESENTATION_HEIGHT = "launch_presentation_height";
+    public static final String LAUNCH_PRESENTATION_HEIGHT = "launch_presentation_height";
     /**
      * launch_presentation_locale=en_US_variant
      * <p>
@@ -100,7 +100,7 @@ public abstract class LTIv1p0 {
      * at http://www.chemie.fu- berlin.de/diverse/doc/ISO_3166.html). Country and
      * variant codes are optional.
      */
-    public final String LAUNCH_PRESENTATION_LOCALE = "launch_presentation_locale";
+    public static final String LAUNCH_PRESENTATION_LOCALE = "launch_presentation_locale";
     /**
      * launch_presentation_return_url=http://lmsng.school.edu/portal/123/page/988/
      * <p>
@@ -117,14 +117,14 @@ public abstract class LTIv1p0 {
      * sent on the URL as a GET - so the TP should take care to keep the overall length of
      * the parameters small enough to fit within the limitations of a GET request.
      */
-    public final String LAUNCH_PRESENTATION_RETURN_URL = "launch_presentation_return_url";
+    public static final String LAUNCH_PRESENTATION_RETURN_URL = "launch_presentation_return_url";
     /**
      * launch_presentation_width=320
      * <p>
      * The width of the window or frame where the content from the tool will be
      * displayed.
      */
-    public final String LAUNCH_PRESENTATION_WIDTH = "launch_presentation_width";
+    public static final String LAUNCH_PRESENTATION_WIDTH = "launch_presentation_width";
     /**
      * launch_presentation_css_url=http://www.toolconsumer.url/path/to/lti.css 
      * <p>
@@ -134,7 +134,7 @@ public abstract class LTIv1p0 {
      * tool as to whether this CSS is used or not, and in what order this is included relative
      * to the tool-specific CSS. 
      */
-    public final String LAUNCH_PRESENTATION_CSS_URL = "launch_presentation_css_url";
+    public static final String LAUNCH_PRESENTATION_CSS_URL = "launch_presentation_css_url";
     /**
      * lis_person_contact_email_primary=user@school.edu
      * <p>
@@ -142,7 +142,7 @@ public abstract class LTIv1p0 {
      * this launch. The names of these data items are taken from LIS. The precise
      * meaning of the content in these fields is defined by LIS.
      */
-    public final String LIS_PERSON_CONTACT_EMAIL_PRIMARY = "lis_person_contact_email_primary";
+    public static final String LIS_PERSON_CONTACT_EMAIL_PRIMARY = "lis_person_contact_email_primary";
     /**
      * lis_person_name_family=Public
      * <p>
@@ -150,7 +150,7 @@ public abstract class LTIv1p0 {
      * this launch. The names of these data items are taken from LIS. The precise
      * meaning of the content in these fields is defined by LIS.
      */
-    public final String LIS_PERSON_NAME_FAMILY = "lis_person_name_family";
+    public static final String LIS_PERSON_NAME_FAMILY = "lis_person_name_family";
     /**
      * lis_person_name_full=Jane Q. Public
      * <p>
@@ -158,7 +158,7 @@ public abstract class LTIv1p0 {
      * this launch. The names of these data items are taken from LIS. The precise
      * meaning of the content in these fields is defined by LIS.
      */
-    public final String LIS_PERSON_NAME_FULL = "lis_person_name_full";
+    public static final String LIS_PERSON_NAME_FULL = "lis_person_name_full";
     /**
      * lis_person_name_given=Jane
      * <p>
@@ -166,7 +166,7 @@ public abstract class LTIv1p0 {
      * this launch. The names of these data items are taken from LIS. The precise
      * meaning of the content in these fields is defined by LIS.
      */
-    public final String LIS_PERSON_NAME_GIVEN = "lis_person_name_given";
+    public static final String LIS_PERSON_NAME_GIVEN = "lis_person_name_given";
 
     /**
      * lis_person_sourcedid=school.edu:user
@@ -177,7 +177,7 @@ public abstract class LTIv1p0 {
      * unique identifier (i.e., a normalized string). This field 
      * is optional and its content and meaning are defined by LIS.    
      */
-    public final String LIS_PERSON_SOURCEDID = "lis_person_sourcedid";
+    public static final String LIS_PERSON_SOURCEDID = "lis_person_sourcedid";
 
     /**
      * lis_course_offering_sourcedid=school.edu:SI182-F08 <br/>
@@ -187,8 +187,8 @@ public abstract class LTIv1p0 {
      * context of this launch.  These fields are optional and their 
      * content and meaning are defined by LIS. 
      */
-    public final String LIS_COURSE_OFFERING_SOURCEDID = "lis_course_offering_sourcedid";
-    public final String LIS_COURSE_SECTION_SOURCEDID = "lis_course_section_sourcedid";
+    public static final String LIS_COURSE_OFFERING_SOURCEDID = "lis_course_offering_sourcedid";
+    public static final String LIS_COURSE_SECTION_SOURCEDID = "lis_course_section_sourcedid";
 
     /**
      * lis_outcome_service_url=http://lmsng.school.edu/service/ltiout/
@@ -201,7 +201,7 @@ public abstract class LTIv1p0 {
      * The TC will respond with a response of 'unimplemented' for services 
      * it does not support.  
      */
-    public final String LIS_OUTCOME_SERVICE_URL = "lis_outcome_service_url";
+    public static final String LIS_OUTCOME_SERVICE_URL = "lis_outcome_service_url";
 
     /**
      * lis_result_sourcedid=83873872987329873264783687634
@@ -210,7 +210,7 @@ public abstract class LTIv1p0 {
      * Identifier (if any) associated with this launch. This field is 
      * optional and its content and meaning is defined by LIS.    
      */
-    public final String LIS_RESULT_SOURCEDID = "lis_result_sourcedid";
+    public static final String LIS_RESULT_SOURCEDID = "lis_result_sourcedid";
 
     /**
      * lti_message_type=basic-lti-launch-request
@@ -219,14 +219,14 @@ public abstract class LTIv1p0 {
      * accept a number of different LTI message types at the same launch URL. This
      * parameter is required.
      */
-    public final String LTI_MESSAGE_TYPE = "lti_message_type";
+    public static final String LTI_MESSAGE_TYPE = "lti_message_type";
     /**
      * lti_version=LTI-1p0
      * <p>
      * This indicates which version of the specification is being used for this
      * particular message. This parameter is required.
      */
-    public final String LTI_VERSION = "lti_version";
+    public static final String LTI_VERSION = "lti_version";
     // launch settings per spec - computed not stored
 
    /** 
@@ -245,7 +245,7 @@ public abstract class LTIv1p0 {
     *   webct
     * This parameter is optional but recommended.
     */
-    public final String TOOL_CONSUMER_INFO_PRODUCT_FAMILY_CODE = "tool_consumer_info_product_family_code";
+    public static final String TOOL_CONSUMER_INFO_PRODUCT_FAMILY_CODE = "tool_consumer_info_product_family_code";
 
    /** 
     * tool_consumer_info_version=9.2.4
@@ -259,7 +259,7 @@ public abstract class LTIv1p0 {
     * The Tool Provider should be flexible when parsing this field.  This parameter is optional but recommended.
 
      */
-    public final String TOOL_CONSUMER_INFO_VERSION = "tool_consumer_info_version";
+    public static final String TOOL_CONSUMER_INFO_VERSION = "tool_consumer_info_version";
 
     /**
      * resource_link_id=88391-e1919-bb3456
@@ -271,7 +271,7 @@ public abstract class LTIv1p0 {
      * system or context and imported into another system or context. This
      * parameter is required.
      */
-    public final String RESOURCE_LINK_ID = "resource_link_id";
+    public static final String RESOURCE_LINK_ID = "resource_link_id";
 
     /**
      * resource_link_title=My Weekly Wiki
@@ -279,7 +279,7 @@ public abstract class LTIv1p0 {
      * A title for the resource. This is the clickable text that appears 
      * in the link. This parameter is recommended.
      */
-    public final String RESOURCE_LINK_TITLE = "resource_link_title";
+    public static final String RESOURCE_LINK_TITLE = "resource_link_title";
 
     /**
      * resource_link_description=…
@@ -288,7 +288,7 @@ public abstract class LTIv1p0 {
      * display alongside the link. Typically no more than several lines 
      * long. This parameter is optional.
      */
-    public final String RESOURCE_LINK_DESCRIPTION = "resource_link_description";
+    public static final String RESOURCE_LINK_DESCRIPTION = "resource_link_description";
 
     /**
      * roles=Instructor,Student
@@ -303,19 +303,19 @@ public abstract class LTIv1p0 {
      * vocabularies is discouraged as it may limit interoperability. This
      * parameter is recommended.
      */
-    public final String ROLES = "roles";
+    public static final String ROLES = "roles";
     /**
      * tool_consumer_instance_contact_email=System.Admin@school.edu
      * <p>
      * An email contact for the TC instance.
      */
-    public final String TOOL_CONSUMER_INSTANCE_CONTACT_EMAIL = "tool_consumer_instance_contact_email";
+    public static final String TOOL_CONSUMER_INSTANCE_CONTACT_EMAIL = "tool_consumer_instance_contact_email";
     /**
      * tool_consumer_instance_description=University of School (LMSng)
      * <p>
      * This is a user visible field - it should be about the length of a line.
      */
-    public final String TOOL_CONSUMER_INSTANCE_DESCRIPTION = "tool_consumer_instance_description";
+    public static final String TOOL_CONSUMER_INSTANCE_DESCRIPTION = "tool_consumer_instance_description";
     // global settings
     /**
      * tool_consumer_instance_guid=lmsng.school.edu
@@ -327,18 +327,18 @@ public abstract class LTIv1p0 {
      * practice is to prefix the domain name with a locally unique identifier for
      * the TC instance. This parameter is recommended.
      */
-    public final String TOOL_CONSUMER_INSTANCE_GUID = "tool_consumer_instance_guid";
+    public static final String TOOL_CONSUMER_INSTANCE_GUID = "tool_consumer_instance_guid";
     /**
      * tool_consumer_instance_name=SchoolU
      * <p>
      * This is a user visible field - it should be about the length of a column.
      */
-    public final String TOOL_CONSUMER_INSTANCE_NAME = "tool_consumer_instance_name";
+    public static final String TOOL_CONSUMER_INSTANCE_NAME = "tool_consumer_instance_name";
     /**
      * Missing from implementation guide. Needs documentation. Not required, but
      * "tasty".
      */
-    public final String TOOL_CONSUMER_INSTANCE_URL = "tool_consumer_instance_url";
+    public static final String TOOL_CONSUMER_INSTANCE_URL = "tool_consumer_instance_url";
 
     /**
      * user_id=0ae836b9-7fc9-4060-006f-27b2066ac545
@@ -348,7 +348,7 @@ public abstract class LTIv1p0 {
      * TC-generated long-term "primary key" to the user record - not the logical
      * key. This parameter is recommended.
      */
-    public final String USER_ID = "user_id";
+    public static final String USER_ID = "user_id";
 
     /**
      * user_image=http://my.sakai.org/direct/profile/0ae836b9-7fc9-4060-006f-27b2066ac545/image
@@ -358,7 +358,7 @@ public abstract class LTIv1p0 {
      * It is expected to be a relatively small graphic image file using a widely supported image
      * format (i.e. PNG, JPG, or GIF) with a square aspect ratio. This parameter is optional.
      */
-    public final String USER_IMAGE = "user_image";
+    public static final String USER_IMAGE = "user_image";
 
     /**
      * ext_sakai_provider_eid=jsmith26
@@ -368,7 +368,7 @@ public abstract class LTIv1p0 {
      * in Sakai, so this allows integrations with those systems.
      * This parameter is optional and is unique to the Sakai Basic LTI provider.
      */
-    public final String EXT_SAKAI_PROVIDER_EID = "ext_sakai_provider_eid";
+    public static final String EXT_SAKAI_PROVIDER_EID = "ext_sakai_provider_eid";
     
     /**
      * ext_sakai_provider_displayid=john.smith
@@ -378,13 +378,13 @@ public abstract class LTIv1p0 {
      * user_id and ext_sakai_provider_eid.
      * This parameter is optional and is unique to the Sakai Basic LTI provider.
      */
-    public final String EXT_SAKAI_PROVIDER_DISPLAYID = "ext_sakai_provider_displayid";
+    public static final String EXT_SAKAI_PROVIDER_DISPLAYID = "ext_sakai_provider_displayid";
 
     /**
      * Utility array useful for validating property names when building launch
      * data.
      */
-    public final String[] validPropertyNames = { CONTEXT_ID,
+    public static final String[] validPropertyNames = { CONTEXT_ID,
         CONTEXT_LABEL, CONTEXT_TITLE, CONTEXT_TYPE,
         LAUNCH_PRESENTATION_DOCUMENT_TARGET, LAUNCH_PRESENTATION_HEIGHT,
         LAUNCH_PRESENTATION_LOCALE, LAUNCH_PRESENTATION_RETURN_URL,
@@ -407,6 +407,6 @@ public abstract class LTIv1p0 {
      * This contains a number of preconfigured roles, so that the IMS role vocabulary can be used.
      * See BLTI-151
      */
-    public final String NEW_SITE_TYPE = "lti";
+    public static final String NEW_SITE_TYPE = "lti";
 
 }

@@ -1,6 +1,7 @@
 .classpath
 .project
 .settings/*
+target/*
+bin/*
 make.sh
 deploy.sh
-/bin

@@ -39,8 +39,8 @@ public class LTIv1p0ToolProvider extends LTIv1p0 implements LTIToolProvider{
         this.key = key;
         this.secret = secret;
 
-        if( params.containsKey(OAuth.OAUTH_CONSUMER_KEY)) oauth_consumer_key = params.get(OAuth.OAUTH_CONSUMER_KEY); else throw new AmbasadoroException("Parameter [" + OAuth.OAUTH_CONSUMER_KEY + "] not included", "OAuthError");
-        if( params.containsKey(OAuth.OAUTH_SIGNATURE)) oauth_signature = params.get(OAuth.OAUTH_SIGNATURE); else throw new AmbasadoroException("Parameter [" + OAuth.OAUTH_SIGNATURE + "] not included", "OAuthError");
+        if( params.containsKey(OAuth.OAUTH_CONSUMER_KEY)) oauth_consumer_key = params.get(OAuth.OAUTH_CONSUMER_KEY); else throw new LTIException("Parameter [" + OAuth.OAUTH_CONSUMER_KEY + "] not included", "OAuthError");
+        if( params.containsKey(OAuth.OAUTH_SIGNATURE)) oauth_signature = params.get(OAuth.OAUTH_SIGNATURE); else throw new LTIException("Parameter [" + OAuth.OAUTH_SIGNATURE + "] not included", "OAuthError");
         this.params = params;
     }
 
