@@ -1,8 +1,8 @@
-package org.lti;
+package org.lti.api;
 
 /**
  * LTI Role definitions.
- * 
+ *
  * @author Jesus Federico
  */
 public class LTIRoles {
@@ -21,14 +21,13 @@ public class LTIRoles {
     public static String ADMINISTRATOR = "Administrator";
     public static String OBSERVER = "Observer";
     public static String NONE = "None";
-    
+
     public static String URN_SYSTEM_ROLE = "urn:lti:sysrole:ims/lis/";
     public static String URN_INSTITUTION_ROLE = "urn:lti:instrole:ims/lis/";
     public static String URN_CONTEXT_ROLE = "urn:lti:role:ims/lis/";
 
     public static boolean isLearner(String _roles){
         boolean response = false;
-        
         String[] roles = _roles.split(",");
         for( int i=0; i < roles.length; i++){
             if( roles[i].equals(LEARNER) ||
@@ -39,14 +38,12 @@ public class LTIRoles {
                 break;
             }
         }
-        
         return response;
     }
 
     public static boolean isLearner(String _roles, boolean exclusive){
         if( exclusive ){
             boolean response = true;
-
             String[] roles = _roles.split(",");
             for( int i=0; i < roles.length; i++){
                 if( !roles[i].equals(LEARNER) &&
@@ -57,7 +54,6 @@ public class LTIRoles {
                     break;
                 }
             }
-
             return response;
         } else {
             return isLearner(_roles);
@@ -66,7 +62,6 @@ public class LTIRoles {
 
     public static boolean isStudent(String _roles){
         boolean response = false;
-        
         String[] roles = _roles.split(",");
         for( int i=0; i < roles.length; i++){
             if( roles[i].equals(STUDENT) ||
@@ -77,14 +72,12 @@ public class LTIRoles {
                 break;
             }
         }
-        
         return response;
     }
-    
+
     public static boolean isStudent(String _roles, boolean exclusive){
         if( exclusive ){
             boolean response = true;
-
             String[] roles = _roles.split(",");
             for( int i=0; i < roles.length; i++){
                 if( !roles[i].equals(STUDENT) &&
@@ -95,17 +88,14 @@ public class LTIRoles {
                     break;
                 }
             }
-
             return response;
         } else {
             return isStudent(_roles);
         }
     }
 
-    
     public static boolean isAdministrator(String _roles){
         boolean response = false;
-        
         String[] roles = _roles.split(",");
         for( int i=0; i < roles.length; i++){
             if( roles[i].equals(ADMINISTRATOR) ||
@@ -116,12 +106,10 @@ public class LTIRoles {
                 break;
             }
         }
-        
         return response;
     }
-    
-    public static boolean isAdmin(String _roles){
-    	return isAdministrator(_roles);
-    }
 
+    public static boolean isAdmin(String _roles){
+        return isAdministrator(_roles);
+    }
 }
