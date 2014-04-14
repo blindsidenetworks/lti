@@ -26,6 +26,9 @@ public class LTIRoles {
     public static String URN_INSTITUTION_ROLE = "urn:lti:instrole:ims/lis/";
     public static String URN_CONTEXT_ROLE = "urn:lti:role:ims/lis/";
 
+    public static boolean EXCLUSIVE = true;
+    public static boolean NONEXCLUSIVE = false;
+
     public static boolean isLearner(String _roles){
         boolean response = false;
         String[] roles = _roles.split(",");
