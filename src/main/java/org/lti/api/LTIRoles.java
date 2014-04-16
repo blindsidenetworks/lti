@@ -115,4 +115,38 @@ public class LTIRoles {
     public static boolean isAdmin(String _roles){
         return isAdministrator(_roles);
     }
+
+    public static boolean isA(String _roles, String _role){
+        boolean response = false;
+        String[] roles = _roles.split(",");
+        for( int i=0; i < roles.length; i++){
+            if( roles[i].equals(_role) ||
+                roles[i].equals(URN_INSTITUTION_ROLE + _role) ||
+                roles[i].equals(URN_CONTEXT_ROLE + _role)
+                ){
+                response = true;
+                break;
+            }
+        }
+        return response;
+    }
+
+    public static boolean isA(String _roles, String _role, boolean exclusive){
+        if( exclusive ){
+            boolean response = true;
+            String[] roles = _roles.split(",");
+            for( int i=0; i < roles.length; i++){
+                if( !roles[i].equals(_role) &&
+                    !roles[i].equals(URN_INSTITUTION_ROLE + _role) &&
+                    !roles[i].equals(URN_CONTEXT_ROLE + _role)
+                    ){
+                    response = false;
+                    break;
+                }
+            }
+            return response;
+        } else {
+            return isA(_roles, _role);
+        }
+    }
 }
