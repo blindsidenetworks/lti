@@ -102,6 +102,7 @@ public class LTIRoles {
         String[] roles = _roles.split(",");
         for( int i=0; i < roles.length; i++){
             if( roles[i].equals(ADMINISTRATOR) ||
+                roles[i].equals(URN_SYSTEM_ROLE + ADMINISTRATOR) ||
                 roles[i].equals(URN_INSTITUTION_ROLE + ADMINISTRATOR) ||
                 roles[i].equals(URN_CONTEXT_ROLE + ADMINISTRATOR)
                 ){
@@ -149,4 +150,21 @@ public class LTIRoles {
             return isA(_roles, _role);
         }
     }
+
+    public static boolean isAny(String _roles, String _role){
+        String[] roles = _roles.split(",");
+        String[] role = _role.split(",");
+        for( int i=0; i < roles.length; i++){
+            for( int j=0; j < role.length; j++){
+                if( roles[i].equals(role[j]) ||
+                    roles[i].equals(URN_INSTITUTION_ROLE + role[j]) ||
+                    roles[i].equals(URN_CONTEXT_ROLE + role[j])
+                    ){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
 }

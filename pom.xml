@@ -4,7 +4,7 @@
   <groupId>org.lti</groupId>
   <artifactId>lti</artifactId>
   <packaging>jar</packaging>
-  <version>1.0.6</version>
+  <version>1.0.7</version>
   <name>LTI</name>
   <description>LTI Library for java integrations.</description>
     
