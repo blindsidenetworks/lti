@@ -69,7 +69,10 @@ public class LTIv1p0ToolProvider extends LTIv1p0 implements LTIToolProvider{
         boolean response = true;
         String missingParams = "";
         for (int i = 0; i < requiredParameters.length(); i++) {
-            if( !params.containsKey(requiredParameters.getString(i)) ){
+            JSONObject requiredParam = requiredParameters.getJSONObject(i);
+            String paramName = requiredParam.getString("name");
+
+            if( !params.containsKey(paramName) ){
                 if( missingParams.length()>0) missingParams += ", ";
                 missingParams += requiredParameters.getString(i);
                 response = false;
