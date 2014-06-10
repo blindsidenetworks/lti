@@ -122,6 +122,7 @@ public class LTIRoles {
         String[] roles = _roles.split(",");
         for( int i=0; i < roles.length; i++){
             if( roles[i].equals(_role) ||
+                roles[i].equals(URN_SYSTEM_ROLE + _role) ||
                 roles[i].equals(URN_INSTITUTION_ROLE + _role) ||
                 roles[i].equals(URN_CONTEXT_ROLE + _role)
                 ){
@@ -138,6 +139,7 @@ public class LTIRoles {
             String[] roles = _roles.split(",");
             for( int i=0; i < roles.length; i++){
                 if( !roles[i].equals(_role) &&
+                    !roles[i].equals(URN_SYSTEM_ROLE + _role) &&
                     !roles[i].equals(URN_INSTITUTION_ROLE + _role) &&
                     !roles[i].equals(URN_CONTEXT_ROLE + _role)
                     ){
@@ -157,6 +159,7 @@ public class LTIRoles {
         for( int i=0; i < roles.length; i++){
             for( int j=0; j < role.length; j++){
                 if( roles[i].equals(role[j]) ||
+                    roles[i].equals(URN_SYSTEM_ROLE + role[j]) ||
                     roles[i].equals(URN_INSTITUTION_ROLE + role[j]) ||
                     roles[i].equals(URN_CONTEXT_ROLE + role[j])
                     ){

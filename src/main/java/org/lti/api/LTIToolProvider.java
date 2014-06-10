@@ -11,5 +11,5 @@ public interface LTIToolProvider {
     public Map<String, String> getParameters();
     public String getParameter(String key);
     public void putParameter(String key, String value);
-
+    public boolean hasParameter(String key);
 }

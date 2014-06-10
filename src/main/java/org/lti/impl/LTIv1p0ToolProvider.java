@@ -39,8 +39,8 @@ public class LTIv1p0ToolProvider extends LTIv1p0 implements LTIToolProvider{
         this.key = key;
         this.secret = secret;
 
-        if( params.containsKey(OAuth.OAUTH_CONSUMER_KEY)) oauth_consumer_key = params.get(OAuth.OAUTH_CONSUMER_KEY); else throw new LTIException("Parameter [" + OAuth.OAUTH_CONSUMER_KEY + "] not included", "OAuthError");
-        if( params.containsKey(OAuth.OAUTH_SIGNATURE)) oauth_signature = params.get(OAuth.OAUTH_SIGNATURE); else throw new LTIException("Parameter [" + OAuth.OAUTH_SIGNATURE + "] not included", "OAuthError");
+        if( params.containsKey(OAuth.OAUTH_CONSUMER_KEY)) oauth_consumer_key = params.get(OAuth.OAUTH_CONSUMER_KEY); else throw new LTIException("OAuthError", "Parameter [" + OAuth.OAUTH_CONSUMER_KEY + "] not included");
+        if( params.containsKey(OAuth.OAUTH_SIGNATURE)) oauth_signature = params.get(OAuth.OAUTH_SIGNATURE); else throw new LTIException("OAuthError", "Parameter [" + OAuth.OAUTH_SIGNATURE + "] not included");
         this.params = params;
     }
 
@@ -73,12 +73,12 @@ public class LTIv1p0ToolProvider extends LTIv1p0 implements LTIToolProvider{
             String paramName = requiredParam.getString("name");
 
             if( !params.containsKey(paramName) ){
-                if( missingParams.length()>0) missingParams += ", ";
-                missingParams += requiredParameters.getString(i);
+                missingParams += (missingParams.length()>0)? ", ": "";
+                missingParams += paramName;
                 response = false;
             }
         }
-        if(!response) throw new LTIException("Required Parameters [" + missingParams + "] not included", "ToolProviderError");
+        if(!response) throw new LTIException("ToolProviderError", "Required Parameters [" + missingParams + "] not included");
         else return response;
     }
 
@@ -123,5 +123,8 @@ public class LTIv1p0ToolProvider extends LTIv1p0 implements LTIToolProvider{
     public void putParameter(String key, String value){
         params.put(key, value);
     }
-
+    
+    public boolean hasParameter(String key){
+        return params.containsKey(key);
+    }
 }
